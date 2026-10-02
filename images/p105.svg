@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Nilgiri Green Tea — pale green pouch with Blue Mountain landscape">
+  <title>Nilgiri Green Tea</title>
+  <!-- Background: pale sage -->
+  <rect width="400" height="400" fill="#e2ead8"/>
+  <!-- Soft hill suggestion -->
+  <path d="M0 300 Q100 240 200 260 Q300 280 400 240 L400 400 L0 400 Z" fill="#c8d8b8" opacity="0.4"/>
+  <!-- Shadow -->
+  <ellipse cx="200" cy="358" rx="106" ry="15" fill="#98b080" opacity="0.4"/>
+  <!-- Pouch body — fresh pale green -->
+  <rect x="124" y="100" width="152" height="228" rx="12" fill="#b8d4a8"/>
+  <!-- Darker green depth -->
+  <rect x="128" y="104" width="52" height="220" rx="8" fill="#a8c898" opacity="0.5"/>
+  <!-- Top seal -->
+  <rect x="134" y="94" width="132" height="14" rx="7" fill="#4f7942"/>
+  <!-- Gusset -->
+  <path d="M134 308 Q134 336 160 336 L240 336 Q266 336 266 308 Z" fill="#4f7942"/>
+  <!-- White label panel -->
+  <rect x="132" y="148" width="136" height="130" rx="8" fill="#f8f8f2"/>
+  <!-- Green accent top of label -->
+  <rect x="132" y="148" width="136" height="22" rx="8" fill="#4f7942"/>
+  <rect x="132" y="158" width="136" height="12" fill="#4f7942"/>
+  <!-- Mountain silhouette on label (Blue Mountains) -->
+  <path d="M140 240 L168 192 L188 218 L205 200 L222 222 L240 198 L260 242 Z" fill="#d8ead0" opacity="0.8"/>
+  <path d="M140 242 Q200 230 260 242" fill="#e4f0da" opacity="0.4"/>
+  <!-- Tea leaves on label -->
+  <ellipse cx="172" cy="255" rx="12" ry="5" fill="#4f7942" transform="rotate(-30 172 255)" opacity="0.7"/>
+  <ellipse cx="228" cy="252" rx="12" ry="5" fill="#3a6332" transform="rotate(30 228 252)" opacity="0.7"/>
+  <ellipse cx="200" cy="263" rx="10" ry="4" fill="#4f7942" opacity="0.6"/>
+  <!-- Product text on white label -->
+  <text x="200" y="174" font-family="Arial, sans-serif" font-size="8" fill="#f6f1e7" text-anchor="middle" letter-spacing="1.5">MISTVALE TEA CO.</text>
+  <text x="200" y="207" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#1f3d2b" text-anchor="middle" letter-spacing="0.5">NILGIRI</text>
+  <text x="200" y="223" font-family="Georgia, serif" font-size="10" fill="#4f7942" text-anchor="middle" letter-spacing="1.5">GREEN TEA</text>
+  <!-- Mist wisps on label -->
+  <path d="M148 236 Q160 232 172 236" stroke="#c8d8b8" stroke-width="1.2" fill="none" opacity="0.7"/>
+  <path d="M228 234 Q240 230 252 234" stroke="#c8d8b8" stroke-width="1.2" fill="none" opacity="0.7"/>
+  <!-- Top area decoration -->
+  <ellipse cx="165" cy="128" rx="14" ry="6" fill="#4f7942" transform="rotate(-20 165 128)" opacity="0.5"/>
+  <ellipse cx="235" cy="124" rx="14" ry="6" fill="#3a6332" transform="rotate(20 235 124)" opacity="0.5"/>
+  <!-- Weight & origin -->
+  <text x="200" y="318" font-family="Arial, sans-serif" font-size="9" fill="#1f3d2b" text-anchor="middle" opacity="0.7">100 g · The Blue Mountains</text>
+</svg>

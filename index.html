@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mistvale Tea Co. — Hill-grown tea, honestly made</title>
+<meta name="description" content="Shop premium Indian teas from Mistvale Tea Co. Assam, Darjeeling, Kashmiri Kahwa, herbal blends and gift boxes. Delivered across India in 2–5 days.">
+<link rel="canonical" href="https://mistvale.example">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mistvale Tea Co. — Hill-grown tea, honestly made">
+<meta property="og:description" content="Premium Indian teas: Assam, Darjeeling, Kashmiri Kahwa, herbal blends and gift boxes. Free shipping above ₹499.">
+<meta property="og:url" content="https://mistvale.example">
+<meta property="og:image" content="https://mistvale.example/images/hero-banner.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mistvale Tea Co. — Hill-grown tea, honestly made">
+<meta name="twitter:description" content="Premium Indian teas: Assam, Darjeeling, Kashmiri Kahwa, herbal blends and gift boxes.">
+<meta name="twitter:image" content="https://mistvale.example/images/hero-banner.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── CSS custom properties (brand tokens) ── */
+:root {
+  --tea-green:  #1f3d2b;
+  --leaf:       #4f7942;
+  --cream:      #f6f1e7;
+  --parchment:  #ebe2cf;
+  --saffron:    #d9962b;
+  --ink:        #1b1b1b;
+  --error:      #b3261e;
+  --white:      #ffffff;
+  --shadow-sm:  0 1px 3px rgba(0,0,0,.10);
+  --shadow-md:  0 4px 16px rgba(0,0,0,.12);
+  --shadow-lg:  0 8px 32px rgba(0,0,0,.14);
+  --radius:     10px;
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+}
+
+/* ── Reset & base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--cream);
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+input, select { font-family: inherit; font-size: 16px; }
+h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.2; }
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
+/* ── Layout ── */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+.section-pad { padding: 48px 0; }
+@media (min-width: 768px) { .section-pad { padding: 80px 0; } }
+
+/* ── Announcement strip ── */
+.announce {
+  background: var(--tea-green);
+  color: var(--cream);
+  font-size: 14px;
+  text-align: center;
+  padding: 8px 16px;
+  font-weight: 500;
+}
+
+/* ── Header ── */
+.header {
+  background: var(--tea-green);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  box-shadow: var(--shadow-md);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Logo */
+.logo-link { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.logo-link svg { width: 36px; height: 36px; }
+.logo-wordmark { font-family: 'Fraunces', serif; font-size: 22px; color: var(--cream); font-weight: 700; letter-spacing: -0.3px; }
+/* Nav */
+.nav { display: flex; align-items: center; gap: 4px; }
+.nav a {
+  color: rgba(246,241,231,.8);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+.nav a:hover { color: var(--cream); background: rgba(255,255,255,.1); }
+.nav a:focus-visible { outline: 2px solid var(--saffron); outline-offset: 2px; }
+/* Search */
+.search-wrap { position: relative; }
+.search-input {
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 40px;
+  padding: 8px 16px 8px 38px;
+  color: var(--cream);
+  font-size: 14px;
+  width: 180px;
+  transition: background var(--transition-base), border-color var(--transition-base), width var(--transition-base);
+}
+.search-input::placeholder { color: rgba(246,241,231,.5); }
+.search-input:focus { outline: none; background: rgba(255,255,255,.18); border-color: var(--saffron); width: 220px; }
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(246,241,231,.6);
+  pointer-events: none;
+}
+/* Cart btn */
+.cart-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.2);
+  color: var(--cream);
+  padding: 8px 14px;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  min-height: 44px;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+  flex-shrink: 0;
+}
+.cart-btn:hover { background: rgba(255,255,255,.2); border-color: rgba(255,255,255,.4); }
+.cart-btn:focus-visible { outline: 2px solid var(--saffron); outline-offset: 2px; }
+.cart-badge {
+  background: var(--saffron);
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 3px 6px;
+  border-radius: 20px;
+  min-width: 20px;
+  text-align: center;
+}
+/* Mobile nav toggle */
+.nav-toggle { display: none; color: var(--cream); padding: 8px; min-height: 44px; min-width: 44px; align-items: center; justify-content: center; border-radius: var(--radius); transition: background var(--transition-fast); }
+.nav-toggle:hover { background: rgba(255,255,255,.1); }
+.nav-toggle:focus-visible { outline: 2px solid var(--saffron); outline-offset: 2px; }
+@media (max-width: 768px) {
+  .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--tea-green); flex-direction: column; padding: 12px; gap: 4px; border-top: 1px solid rgba(255,255,255,.1); }
+  .nav.open { display: flex; }
+  .nav-toggle { display: flex; }
+  .search-input { width: 140px; }
+  .search-input:focus { width: 160px; }
+  .logo-wordmark { font-size: 18px; }
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--tea-green);
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  min-height: 44px;
+  border: 2px solid var(--tea-green);
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  text-decoration: none;
+}
+.btn-primary:hover { background: #2a5239; border-color: #2a5239; transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.btn-primary:focus-visible { outline: 3px solid var(--saffron); outline-offset: 3px; }
+.btn-primary:active { transform: translateY(0); box-shadow: none; }
+.btn-primary:disabled { opacity: .45; cursor: not-allowed; transform: none; }
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--tea-green);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 11px 27px;
+  border-radius: var(--radius);
+  min-height: 44px;
+  border: 2px solid var(--tea-green);
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+  text-decoration: none;
+}
+.btn-secondary:hover { background: var(--tea-green); color: var(--cream); transform: translateY(-1px); }
+.btn-secondary:focus-visible { outline: 3px solid var(--saffron); outline-offset: 3px; }
+.btn-secondary:active { transform: translateY(0); }
+.btn-sm {
+  font-size: 13px;
+  padding: 8px 18px;
+  min-height: 36px;
+}
+
+/* ── Hero ── */
+.hero {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--tea-green);
+}
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(31,61,43,.85) 0%, rgba(31,61,43,.55) 60%, rgba(31,61,43,.2) 100%);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  padding: 64px 16px;
+}
+.hero-label {
+  display: inline-block;
+  background: var(--saffron);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.hero h1 {
+  font-size: clamp(36px, 6vw, 60px);
+  color: var(--cream);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+.hero-sub {
+  font-size: 18px;
+  color: rgba(246,241,231,.85);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+.hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero .btn-primary { background: var(--saffron); border-color: var(--saffron); color: var(--ink); font-weight: 700; }
+.hero .btn-primary:hover { background: #c4841f; border-color: #c4841f; }
+.hero .btn-secondary { color: var(--cream); border-color: rgba(246,241,231,.6); }
+.hero .btn-secondary:hover { background: rgba(246,241,231,.15); color: var(--cream); }
+
+/* ── Trust strip ── */
+.trust-strip {
+  background: var(--parchment);
+  border-top: 1px solid rgba(31,61,43,.1);
+  border-bottom: 1px solid rgba(31,61,43,.1);
+}
+.trust-inner {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 28px;
+  flex: 1 1 200px;
+  border-right: 1px solid rgba(31,61,43,.1);
+}
+.trust-item:last-child { border-right: none; }
+.trust-icon { color: var(--leaf); flex-shrink: 0; }
+.trust-text strong { display: block; font-size: 14px; font-weight: 600; color: var(--ink); }
+.trust-text span { font-size: 13px; color: #555; }
+
+/* ── Shop section ── */
+.shop-section { padding: 64px 0 80px; }
+.section-header { margin-bottom: 40px; }
+.section-header h2 { font-size: clamp(28px, 4vw, 40px); color: var(--tea-green); margin-bottom: 8px; }
+.section-header p { font-size: 16px; color: #555; }
+
+/* Filter / search / sort bar */
+.shop-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  padding: 16px;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+.filter-chips { display: flex; flex-wrap: wrap; gap: 6px; flex: 1; }
+.chip {
+  padding: 7px 16px;
+  border-radius: 40px;
+  border: 1.5px solid var(--parchment);
+  background: var(--cream);
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+  min-height: 36px;
+}
+.chip:hover { border-color: var(--leaf); color: var(--leaf); }
+.chip:focus-visible { outline: 2px solid var(--saffron); outline-offset: 2px; }
+.chip.active { background: var(--tea-green); color: var(--cream); border-color: var(--tea-green); }
+.sort-select {
+  padding: 8px 12px;
+  border: 1.5px solid var(--parchment);
+  border-radius: var(--radius);
+  background: var(--cream);
+  font-size: 14px;
+  color: var(--ink);
+  cursor: pointer;
+  min-height: 36px;
+  transition: border-color var(--transition-fast);
+}
+.sort-select:hover { border-color: var(--leaf); }
+.sort-select:focus { outline: 2px solid var(--saffron); outline-offset: 2px; border-color: var(--leaf); }
+.results-count { font-size: 14px; color: #777; white-space: nowrap; }
+
+/* Product grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+@media (min-width: 640px) { .product-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; } }
+@media (min-width: 900px) { .product-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
+@media (min-width: 1100px) { .product-grid { grid-template-columns: repeat(4, 1fr); } }
+
+/* Product card */
+.product-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+  position: relative;
+}
+.product-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.product-card.oos { opacity: .75; }
+.card-img-wrap {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--parchment);
+  cursor: pointer;
+}
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+.product-card:hover .card-img-wrap img { transform: scale(1.04); }
+.card-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: .3px;
+}
+.badge-oos { background: var(--ink); color: var(--cream); }
+.badge-new { background: var(--leaf); color: var(--cream); }
+.wishlist-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  transition: color var(--transition-fast), background var(--transition-fast);
+  backdrop-filter: blur(4px);
+}
+.wishlist-btn:hover { color: var(--error); background: var(--white); }
+.wishlist-btn.liked { color: var(--error); }
+.wishlist-btn:focus-visible { outline: 2px solid var(--saffron); outline-offset: 2px; }
+.card-body { padding: 14px; flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.card-category { font-size: 12px; font-weight: 600; color: var(--leaf); text-transform: uppercase; letter-spacing: .5px; }
+.card-name { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 600; color: var(--ink); line-height: 1.3; }
+.card-desc { font-size: 13px; color: #666; line-height: 1.5; flex: 1; }
+.card-rating { display: flex; align-items: center; gap: 5px; font-size: 13px; }
+.stars-filled { color: var(--saffron); display: flex; }
+.card-price { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 700; color: var(--tea-green); }
+.card-footer { padding: 0 14px 14px; }
+.add-cart-btn {
+  width: 100%;
+  background: var(--tea-green);
+  color: var(--cream);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: var(--radius);
+  min-height: 44px;
+  border: 2px solid var(--tea-green);
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+.add-cart-btn:hover:not(:disabled) { background: #2a5239; border-color: #2a5239; }
+.add-cart-btn:focus-visible { outline: 3px solid var(--saffron); outline-offset: 2px; }
+.add-cart-btn:active:not(:disabled) { transform: scale(.98); }
+.add-cart-btn:disabled { background: #aaa; border-color: #aaa; cursor: not-allowed; }
+.quick-view-btn {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  opacity: 0;
+  background: rgba(255,255,255,.92);
+  color: var(--tea-green);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--parchment);
+  white-space: nowrap;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  backdrop-filter: blur(4px);
+}
+.product-card:hover .quick-view-btn { opacity: 1; transform: translateX(-50%) translateY(0); }
+.no-results { grid-column: 1 / -1; text-align: center; padding: 48px; color: #888; font-size: 16px; }
+
+/* ── Quick view modal ── */
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  z-index: 300;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.modal-backdrop.open { display: flex; }
+.modal {
+  background: var(--white);
+  border-radius: 16px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+}
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--parchment);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  font-size: 18px;
+  transition: background var(--transition-fast);
+  z-index: 1;
+}
+.modal-close:hover { background: #d9ceba; }
+.modal-close:focus-visible { outline: 2px solid var(--saffron); outline-offset: 2px; }
+.modal-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+@media (max-width: 580px) { .modal-inner { grid-template-columns: 1fr; } }
+.modal-img { aspect-ratio: 1; object-fit: cover; border-radius: 16px 0 0 16px; width: 100%; }
+@media (max-width: 580px) { .modal-img { border-radius: 16px 16px 0 0; } }
+.modal-body { padding: 28px 24px; display: flex; flex-direction: column; gap: 12px; }
+.modal-category { font-size: 12px; font-weight: 700; color: var(--leaf); text-transform: uppercase; letter-spacing: .6px; }
+.modal-name { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700; color: var(--ink); }
+.modal-desc { font-size: 15px; color: #555; line-height: 1.6; }
+.modal-price { font-family: 'Fraunces', serif; font-size: 26px; font-weight: 700; color: var(--tea-green); }
+.modal-stock { font-size: 13px; color: #888; }
+.modal-add-btn { margin-top: auto; }
+
+/* ── Cart drawer ── */
+.cart-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 250; }
+.cart-overlay.open { display: block; }
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(400px, 100vw);
+  height: 100%;
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+  z-index: 260;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform var(--transition-base);
+}
+.cart-drawer.open { transform: translateX(0); }
+.cart-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid var(--parchment);
+}
+.cart-head h2 { font-size: 20px; font-family: 'Fraunces', serif; }
+.cart-close {
+  width: 36px; height: 36px; border-radius: 50%; background: var(--parchment); display: flex; align-items: center; justify-content: center; font-size: 18px;
+  transition: background var(--transition-fast);
+}
+.cart-close:hover { background: #d9ceba; }
+.cart-close:focus-visible { outline: 2px solid var(--saffron); outline-offset: 2px; }
+.cart-body { flex: 1; overflow-y: auto; padding: 16px 20px; display: flex; flex-direction: column; gap: 12px; }
+.cart-empty { text-align: center; padding: 48px 24px; color: #888; }
+.cart-empty svg { margin: 0 auto 16px; opacity: .4; }
+/* Shipping bar */
+.ship-bar-wrap { padding: 12px 16px; background: var(--cream); border-radius: var(--radius); margin-bottom: 4px; }
+.ship-msg { font-size: 13px; color: #555; margin-bottom: 6px; }
+.ship-track { background: var(--parchment); height: 6px; border-radius: 3px; overflow: hidden; }
+.ship-fill { background: var(--leaf); height: 100%; border-radius: 3px; transition: width var(--transition-base); }
+/* Cart item */
+.cart-item {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  gap: 12px;
+  align-items: start;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--parchment);
+}
+.cart-item-img { width: 64px; height: 64px; object-fit: cover; border-radius: 8px; background: var(--parchment); }
+.cart-item-name { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 4px; line-height: 1.3; }
+.cart-item-price { font-size: 13px; color: #666; }
+.cart-qty-wrap { display: flex; align-items: center; gap: 6px; margin-top: 8px; }
+.qty-btn { width: 28px; height: 28px; border-radius: 6px; border: 1.5px solid var(--parchment); background: var(--cream); font-size: 16px; display: flex; align-items: center; justify-content: center; transition: background var(--transition-fast); }
+.qty-btn:hover:not(:disabled) { background: var(--parchment); }
+.qty-btn:focus-visible { outline: 2px solid var(--saffron); outline-offset: 2px; }
+.qty-btn:disabled { opacity: .4; cursor: not-allowed; }
+.qty-display { font-size: 15px; font-weight: 600; min-width: 24px; text-align: center; }
+.cart-remove { font-size: 12px; color: var(--error); background: none; border: none; cursor: pointer; padding: 0; margin-top: 6px; }
+.cart-remove:hover { text-decoration: underline; }
+.cart-remove:focus-visible { outline: 2px solid var(--saffron); outline-offset: 2px; }
+.cart-item-line-price { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 700; color: var(--tea-green); white-space: nowrap; padding-top: 2px; }
+/* Coupon */
+.coupon-wrap { padding: 0; display: flex; gap: 8px; }
+.coupon-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1.5px solid var(--parchment);
+  border-radius: var(--radius);
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--cream);
+  transition: border-color var(--transition-fast);
+}
+.coupon-input:focus { outline: none; border-color: var(--leaf); }
+.coupon-msg { font-size: 13px; margin-top: 4px; }
+.coupon-msg.success { color: var(--leaf); }
+.coupon-msg.error { color: var(--error); }
+/* Totals */
+.cart-totals { padding: 16px 0; border-top: 1px solid var(--parchment); display: flex; flex-direction: column; gap: 8px; }
+.totals-row { display: flex; justify-content: space-between; font-size: 14px; color: #555; }
+.totals-row.discount { color: var(--leaf); }
+.totals-row.total { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 700; color: var(--ink); border-top: 1px solid var(--parchment); padding-top: 8px; margin-top: 4px; }
+/* Cart footer */
+.cart-foot { padding: 16px 20px; border-top: 1px solid var(--parchment); display: flex; flex-direction: column; gap: 10px; }
+.checkout-btn {
+  width: 100%;
+  background: var(--tea-green);
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px;
+  border-radius: var(--radius);
+  min-height: 52px;
+  border: 2px solid var(--tea-green);
+  transition: background var(--transition-fast);
+}
+.checkout-btn:hover:not(:disabled) { background: #2a5239; }
+.checkout-btn:focus-visible { outline: 3px solid var(--saffron); outline-offset: 2px; }
+.checkout-btn:disabled { opacity: .45; cursor: not-allowed; }
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: var(--ink);
+  color: var(--cream);
+  padding: 12px 20px;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 400;
+  opacity: 0;
+  transition: transform var(--transition-base), opacity var(--transition-base);
+  pointer-events: none;
+  white-space: nowrap;
+}
+.toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+/* ── Delivery check ── */
+.delivery-section { background: var(--parchment); }
+.delivery-inner { max-width: 520px; margin: 0 auto; text-align: center; }
+.delivery-inner h2 { font-size: clamp(24px, 4vw, 36px); color: var(--tea-green); margin-bottom: 12px; }
+.delivery-inner p { font-size: 15px; color: #555; margin-bottom: 28px; }
+.pin-form { display: flex; gap: 10px; max-width: 340px; margin: 0 auto 16px; }
+.pin-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid rgba(31,61,43,.2);
+  border-radius: var(--radius);
+  font-size: 15px;
+  background: var(--white);
+  color: var(--ink);
+  transition: border-color var(--transition-fast);
+}
+.pin-input:focus { outline: none; border-color: var(--leaf); }
+.pin-input.error-state { border-color: var(--error); }
+#pin-label { display: block; text-align: left; max-width: 340px; margin: 0 auto 6px; font-size: 14px; font-weight: 600; color: var(--ink); }
+#pin-result { font-size: 14px; margin-top: 12px; min-height: 20px; }
+#pin-result.success { color: var(--leaf); font-weight: 600; }
+#pin-result.error { color: var(--error); }
+
+/* ── Reviews ── */
+.reviews-section { background: var(--cream); }
+.reviews-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 40px; }
+@media (min-width: 640px) { .reviews-grid { grid-template-columns: repeat(3, 1fr); } }
+.review-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: box-shadow var(--transition-base);
+}
+.review-card:hover { box-shadow: var(--shadow-md); }
+.review-quote { font-size: 40px; line-height: 1; color: var(--parchment); font-family: 'Fraunces', serif; margin-bottom: 8px; }
+.review-text { font-size: 15px; color: #444; line-height: 1.7; font-style: italic; margin-bottom: 16px; }
+.reviewer-name { font-size: 14px; font-weight: 700; color: var(--tea-green); }
+.reviewer-location { font-size: 13px; color: #888; }
+
+/* ── FAQ ── */
+.faq-section { background: var(--parchment); }
+.faq-inner { max-width: 720px; margin: 0 auto; }
+.faq-list { display: flex; flex-direction: column; gap: 8px; margin-top: 40px; }
+.faq-item { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 18px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  transition: color var(--transition-fast);
+}
+.faq-question:hover { color: var(--tea-green); }
+.faq-question:focus-visible { outline: 2px solid var(--saffron); outline-offset: -2px; }
+.faq-question[aria-expanded="true"] { color: var(--tea-green); }
+.faq-chevron { flex-shrink: 0; transition: transform var(--transition-base); }
+.faq-question[aria-expanded="true"] .faq-chevron { transform: rotate(180deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height var(--transition-base); }
+.faq-answer-inner { padding: 0 20px 18px; font-size: 15px; color: #555; line-height: 1.7; }
+
+/* ── Newsletter ── */
+.newsletter-section { background: var(--tea-green); }
+.newsletter-inner { max-width: 560px; margin: 0 auto; text-align: center; }
+.newsletter-inner h2 { font-size: clamp(26px, 4vw, 38px); color: var(--cream); margin-bottom: 10px; }
+.newsletter-inner p { font-size: 16px; color: rgba(246,241,231,.8); margin-bottom: 28px; }
+.newsletter-form { display: flex; gap: 10px; max-width: 420px; margin: 0 auto; }
+.nl-input {
+  flex: 1;
+  padding: 12px 18px;
+  border: 2px solid rgba(255,255,255,.2);
+  border-radius: var(--radius);
+  font-size: 15px;
+  background: rgba(255,255,255,.1);
+  color: var(--cream);
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+.nl-input::placeholder { color: rgba(246,241,231,.5); }
+.nl-input:focus { outline: none; border-color: var(--saffron); background: rgba(255,255,255,.15); }
+.nl-input.error-state { border-color: #f08080; }
+.nl-label { display: block; text-align: left; max-width: 420px; margin: 0 auto 6px; font-size: 14px; font-weight: 600; color: rgba(246,241,231,.8); }
+.nl-btn { background: var(--saffron); border: 2px solid var(--saffron); color: var(--ink); font-weight: 700; padding: 12px 20px; border-radius: var(--radius); min-height: 48px; font-size: 15px; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: background var(--transition-fast); white-space: nowrap; }
+.nl-btn:hover { background: #c4841f; border-color: #c4841f; }
+.nl-btn:focus-visible { outline: 3px solid var(--cream); outline-offset: 2px; }
+#nl-msg { margin-top: 12px; font-size: 14px; min-height: 18px; }
+#nl-msg.success { color: #a8d5b5; }
+#nl-msg.error { color: #f08080; }
+@media (max-width: 480px) { .newsletter-form { flex-direction: column; } }
+
+/* ── Footer ── */
+.footer { background: var(--ink); color: rgba(246,241,231,.7); padding: 48px 0 32px; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+@media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
+.footer-brand .logo-wordmark { color: var(--cream); font-size: 20px; margin: 10px 0 12px; }
+.footer-brand p { font-size: 14px; line-height: 1.7; color: rgba(246,241,231,.6); }
+.footer-col h4 { font-family: 'Fraunces', serif; font-size: 16px; color: var(--cream); margin-bottom: 16px; }
+.footer-col ul li { margin-bottom: 8px; }
+.footer-col ul li a { font-size: 14px; color: rgba(246,241,231,.6); transition: color var(--transition-fast); }
+.footer-col ul li a:hover { color: var(--cream); }
+.footer-col ul li a:focus-visible { outline: 2px solid var(--saffron); outline-offset: 2px; }
+.social-links { display: flex; gap: 12px; margin-top: 16px; }
+.social-link {
+  width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,.08);
+  display: flex; align-items: center; justify-content: center; color: rgba(246,241,231,.7);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+.social-link:hover { background: rgba(255,255,255,.16); color: var(--cream); }
+.social-link:focus-visible { outline: 2px solid var(--saffron); outline-offset: 2px; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding-top: 24px; }
+.legal { font-size: 12px; color: rgba(246,241,231,.4); line-height: 1.7; max-width: 800px; }
+.copyright { font-size: 13px; color: rgba(246,241,231,.4); margin-top: 8px; }
+
+/* ── Skip link ── */
+.skip-link { position: absolute; top: -100px; left: 16px; background: var(--saffron); color: var(--ink); padding: 8px 16px; border-radius: var(--radius); font-weight: 700; z-index: 999; transition: top var(--transition-fast); }
+.skip-link:focus { top: 16px; }
+
+/* ── Visually hidden ── */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+</style>
+</head>
+<body>
+<a href="#shop" class="skip-link">Skip to main content</a>
+
+<!-- ── Announcement strip ── -->
+<div class="announce" role="banner">
+  Free shipping on orders above ₹499 &nbsp;·&nbsp; Use code WELCOME10 for 10% off your first order
+</div>
+
+<!-- ── Header ── -->
+<header class="header" role="banner">
+  <div class="header-inner">
+    <a href="/" class="logo-link" aria-label="Mistvale Tea Co. — home">
+      <!-- Inline SVG logo: leaf + hill mark -->
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <circle cx="18" cy="18" r="18" fill="#f6f1e7" fill-opacity=".12"/>
+        <path d="M18 28C14 24 8 22 8 16c0-4 4-8 10-8s10 4 10 8c0 6-6 8-10 12z" fill="#4f7942"/>
+        <path d="M18 28V20" stroke="#f6f1e7" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M10 26 Q14 24 18 26 Q22 24 26 26" stroke="#f6f1e7" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="logo-wordmark">Mistvale</span>
+    </a>
+    <nav class="nav" id="main-nav" aria-label="Main navigation">
+      <a href="#shop">Shop</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="search-wrap">
+      <label for="search-input" class="sr-only">Search teas</label>
+      <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" id="search-input" class="search-input" placeholder="Search teas…" autocomplete="off" aria-label="Search teas">
+    </div>
+    <button class="cart-btn" id="cart-toggle-btn" aria-label="Open cart, 0 items" aria-expanded="false" aria-controls="cart-drawer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      Cart
+      <span class="cart-badge" id="cart-count" aria-live="polite" aria-atomic="true">0</span>
+    </button>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ── Hero ── -->
+<section class="hero" aria-labelledby="hero-heading">
+  <img src="images/hero-banner.svg" alt="Mist rising over a lush green tea garden at dawn" class="hero-img">
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-label">Hill-grown tea, honestly made</span>
+      <h1 id="hero-heading">Premium Indian teas, straight from the garden</h1>
+      <p class="hero-sub">Hand-picked from Assam, Darjeeling and the Nilgiris. No fillers, no artificial flavours — just tea worth tasting.</p>
+      <div class="hero-ctas">
+        <a href="#shop" class="btn-primary">Shop the teas</a>
+        <a href="#faq" class="btn-secondary">How it works</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Trust strip ── -->
+<div class="trust-strip" role="complementary" aria-label="Our promises">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <span class="trust-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      </span>
+      <div class="trust-text">
+        <strong>Free shipping above ₹499</strong>
+        <span>Delivered in 2–5 working days</span>
+      </div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </span>
+      <div class="trust-text">
+        <strong>7-day easy returns</strong>
+        <span>Unopened packs, no questions</span>
+      </div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </span>
+      <div class="trust-text">
+        <strong>Prices include GST</strong>
+        <span>No hidden charges at checkout</span>
+      </div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+      </span>
+      <div class="trust-text">
+        <strong>Secure checkout</strong>
+        <span>Your data is always safe</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Shop ── -->
+<main id="shop">
+<section class="shop-section" aria-labelledby="shop-heading">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="shop-heading">Our teas</h2>
+      <p>Each tea is selected from a single estate and packed to order.</p>
+    </div>
+    <div class="shop-controls" role="search" aria-label="Filter and sort teas">
+      <div class="filter-chips" role="group" aria-label="Filter by category">
+        <button class="chip active" data-cat="all" aria-pressed="true">All</button>
+        <button class="chip" data-cat="Black" aria-pressed="false">Black</button>
+        <button class="chip" data-cat="Green" aria-pressed="false">Green</button>
+        <button class="chip" data-cat="Herbal" aria-pressed="false">Herbal</button>
+        <button class="chip" data-cat="Gifts" aria-pressed="false">Gifts</button>
+      </div>
+      <label for="sort-select" class="sr-only">Sort products</label>
+      <select id="sort-select" class="sort-select" aria-label="Sort products">
+        <option value="default">Sort by</option>
+        <option value="low">Price: low to high</option>
+        <option value="high">Price: high to low</option>
+        <option value="name">Name A–Z</option>
+        <option value="rating">Top rated</option>
+      </select>
+      <span class="results-count" id="results-count" aria-live="polite" aria-atomic="true"></span>
+    </div>
+    <div class="product-grid" id="product-grid" aria-label="Products"></div>
+  </div>
+</section>
+</main>
+
+<!-- ── Quick view modal ── -->
+<div class="modal-backdrop" id="quickview-backdrop" role="dialog" aria-modal="true" aria-labelledby="qv-name" tabindex="-1">
+  <div class="modal" id="quickview-modal">
+    <button class="modal-close" id="qv-close" aria-label="Close quick view">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="modal-inner" id="qv-inner"></div>
+  </div>
+</div>
+
+<!-- ── Cart overlay + drawer ── -->
+<div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+<aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping cart" tabindex="-1">
+  <div class="cart-head">
+    <h2>Your cart</h2>
+    <button class="cart-close" id="cart-close-btn" aria-label="Close cart">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="ship-bar-wrap">
+    <div class="ship-msg" id="ship-msg">Add ₹499 more for free shipping.</div>
+    <div class="ship-track"><div class="ship-fill" id="ship-fill" style="width:0%"></div></div>
+  </div>
+  <div class="cart-body" id="cart-body"></div>
+  <div class="cart-foot">
+    <div class="coupon-wrap">
+      <label for="coupon-input" class="sr-only">Coupon code</label>
+      <input type="text" id="coupon-input" class="coupon-input" placeholder="Coupon code" autocomplete="off" aria-label="Enter coupon code">
+      <button class="btn-primary btn-sm" id="coupon-apply-btn" onclick="applyCoupon()">Apply</button>
+    </div>
+    <div id="coupon-msg" class="coupon-msg" aria-live="polite"></div>
+    <div class="cart-totals" id="cart-totals"></div>
+    <button class="checkout-btn" id="checkout-btn" onclick="doCheckout()">Proceed to checkout</button>
+  </div>
+</aside>
+
+<!-- Checkout form (contract — do not rename) -->
+<form id="checkout-form" action="https://mistvale.example/cart/checkout" method="POST" style="display:none">
+  <input type="hidden" name="items" id="form-items">
+  <input type="hidden" name="coupon" id="form-coupon">
+</form>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+<!-- ── Delivery check ── -->
+<section class="delivery-section section-pad" id="delivery" aria-labelledby="delivery-heading">
+  <div class="container">
+    <div class="delivery-inner">
+      <h2 id="delivery-heading">Check delivery to your pincode</h2>
+      <p>Enter your 6-digit pincode to see how quickly we can get your tea to you.</p>
+      <label for="pin-input" id="pin-label">Pincode</label>
+      <div class="pin-form">
+        <input type="text" id="pin-input" class="pin-input" placeholder="e.g. 400001" maxlength="6" inputmode="numeric" pattern="[0-9]{6}" aria-describedby="pin-result" aria-label="Enter your pincode">
+        <button class="btn-primary" id="pin-check-btn" onclick="checkPin()">Check</button>
+      </div>
+      <div id="pin-result" aria-live="polite" aria-atomic="true"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Reviews ── -->
+<section class="reviews-section section-pad" aria-labelledby="reviews-heading">
+  <div class="container">
+    <div class="section-header" style="text-align:center">
+      <h2 id="reviews-heading">What our customers say</h2>
+      <p>Honest words from people who brew our tea every day.</p>
+    </div>
+    <div class="reviews-grid">
+      <article class="review-card">
+        <div class="review-quote" aria-hidden="true">"</div>
+        <p class="review-text">Best masala chai I have ever had. Tastes like my nani's kitchen.</p>
+        <footer>
+          <div class="reviewer-name">Ananya</div>
+          <div class="reviewer-location">Pune</div>
+        </footer>
+      </article>
+      <article class="review-card">
+        <div class="review-quote" aria-hidden="true">"</div>
+        <p class="review-text">The Darjeeling first flush is so fresh. Packaging was lovely too.</p>
+        <footer>
+          <div class="reviewer-name">Rohit</div>
+          <div class="reviewer-location">Bengaluru</div>
+        </footer>
+      </article>
+      <article class="review-card">
+        <div class="review-quote" aria-hidden="true">"</div>
+        <p class="review-text">Bought the sampler as a gift and now my whole family is hooked.</p>
+        <footer>
+          <div class="reviewer-name">Meera</div>
+          <div class="reviewer-location">Kochi</div>
+        </footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="faq-section section-pad" id="faq" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="faq-inner">
+      <div class="section-header" style="text-align:center">
+        <h2 id="faq-heading">Frequently asked questions</h2>
+      </div>
+      <div class="faq-list" id="faq-list"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Newsletter (inline, no auto-popup) ── -->
+<section class="newsletter-section section-pad" aria-labelledby="nl-heading">
+  <div class="container">
+    <div class="newsletter-inner">
+      <h2 id="nl-heading">Stay in the brew</h2>
+      <p>New harvests, seasonal specials and brewing tips — straight to your inbox. No spam, unsubscribe any time.</p>
+      <label for="nl-email" class="nl-label">Email address</label>
+      <div class="newsletter-form">
+        <input type="email" id="nl-email" class="nl-input" placeholder="your@email.com" autocomplete="email" aria-describedby="nl-msg" aria-label="Your email address" required>
+        <button type="button" class="nl-btn" onclick="subscribe()">Subscribe</button>
+      </div>
+      <div id="nl-msg" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="footer" id="contact" aria-label="Site footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo-link" aria-label="Mistvale Tea Co. home">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" width="32" height="32" aria-hidden="true" focusable="false">
+            <circle cx="18" cy="18" r="18" fill="#f6f1e7" fill-opacity=".1"/>
+            <path d="M18 28C14 24 8 22 8 16c0-4 4-8 10-8s10 4 10 8c0 6-6 8-10 12z" fill="#4f7942"/>
+            <path d="M18 28V20" stroke="#f6f1e7" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M10 26 Q14 24 18 26 Q22 24 26 26" stroke="#f6f1e7" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+          </svg>
+          <span class="logo-wordmark">Mistvale</span>
+        </a>
+        <p style="margin-top:14px">Hill-grown tea, honestly made. Sourced from single estates across India since 2019.</p>
+        <div class="social-links">
+          <a href="https://instagram.com/mistvale.example" class="social-link" aria-label="Mistvale on Instagram" rel="noopener noreferrer" target="_blank">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="#shop">Shop all teas</a></li>
+          <li><a href="#delivery">Delivery check</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@mistvale.example">hello@mistvale.example</a></li>
+          <li><a href="tel:+919000012345">+91 90000 12345</a></li>
+          <li style="color:rgba(246,241,231,.6);font-size:14px;line-height:1.6">14 Hill Cart Road,<br>Siliguri, West Bengal 734001</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <!-- LEGAL: approved wording, do not edit (ref MV-LGL-07) -->
+      <p class="legal">All prices are inclusive of GST. Returns are accepted within 7 days of delivery on unopened packs only; opened tea cannot be returned for hygiene reasons. Tea colour and flavour may vary slightly between harvests.</p>
+      <p class="copyright">&copy; 2026 Mistvale Tea Co. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ─────────────────────────────────────────────
+// PRODUCT DATA — DO NOT CHANGE id, name, price
+// ─────────────────────────────────────────────
+const PRODUCTS = [
+  { id: 101, name: "Assam Breakfast Black Tea",     category: "Black",  price: 349,  stock: 40, image: "images/p101.svg", desc: "Strong, malty CTC tea from Upper Assam estates. Perfect with milk and a little sugar in the morning." },
+  { id: 102, name: "Darjeeling First Flush",         category: "Black",  price: 1299, stock: 12, image: "images/p102.svg", desc: "Delicate, floral spring harvest leaves with a muscatel note. Best without milk.", rating: 4.8, reviews: 128 },
+  { id: 103, name: "Kashmiri Kahwa",                category: "Green",  price: 549,  stock: 25, image: "images/p103.svg", desc: "Green tea with saffron, cardamom, cinnamon and almond flakes." },
+  { id: 104, name: "Masala Chai Blend",             category: "Black",  price: 399,  stock: 60, image: "images/p104.svg", desc: "Bold Assam leaves with ginger, cardamom, clove and black pepper. Our bestseller.", rating: 4.7, reviews: 342 },
+  { id: 105, name: "Nilgiri Green Tea",             category: "Green",  price: 449,  stock: 30, image: "images/p105.svg", desc: "Smooth, grassy green tea from the Blue Mountains of the south." },
+  { id: 106, name: "Chamomile & Tulsi",             category: "Herbal", price: 499,  stock: 18, image: "images/p106.svg", desc: "Caffeine-free calming blend of chamomile flowers and holy basil." },
+  { id: 107, name: "Hibiscus Rose Infusion",        category: "Herbal", price: 599,  stock: 0,  image: "images/p107.svg", desc: "Tangy hibiscus with rose petals. Lovely iced." },
+  { id: 108, name: "Tea Lover's Sampler Gift Box",  category: "Gifts",  price: 1899, stock: 9,  image: "images/p108.svg", desc: "Six of our favourite teas in a wooden gift box with a brewing guide." }
+];
+
+// ---- API START: simulated store backend. DO NOT CHANGE this block. ----
+const API = {
+  search: function (query) {
+    const q = String(query).trim().toLowerCase();
+    const delay = Math.max(120, 900 - q.length * 140);
+    return new Promise(function (resolve) {
+      setTimeout(function () {
+        resolve(PRODUCTS.filter(function (p) {
+          return p.name.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q);
+        }).map(function (p) { return p.id; }));
+      }, delay);
+    });
+  },
+  checkPincode: function (pin) {
+    const zones = { '73': 2, '70': 3, '71': 3, '11': 4, '40': 4, '56': 5, '60': 5, '50': 5 };
+    return new Promise(function (resolve, reject) {
+      setTimeout(function () {
+        if (!/^[1-9][0-9]{5}$/.test(String(pin))) return reject(new Error('INVALID_PINCODE'));
+        const days = zones[String(pin).slice(0, 2)];
+        resolve(days ? { serviceable: true, days: days } : { serviceable: false });
+      }, 400 + Math.random() * 600);
+    });
+  }
+};
+// ---- API END ----
+
+// ─────────────────────────────────────────────
+// CONSTANTS
+// ─────────────────────────────────────────────
+const FREE_SHIPPING_THRESHOLD = 499;   // R4: free shipping after discount
+const SHIPPING_COST            = 49;   // R4
+const MAX_QTY_PER_ITEM         = 5;    // R2
+const COUPON_CODE              = 'WELCOME10';
+const COUPON_RATE              = 0.10;
+const COUPON_CAP               = 150;  // R3
+const COUPON_MIN_SUBTOTAL      = 399;  // R3
+
+// ─────────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────────
+let cart         = loadCart();   // [{id, name, price, qty}]
+let appliedCoupon = null;        // null or 'WELCOME10'
+let activeCategory = 'all';
+let activeSortValue = 'default';
+let searchQuery   = '';
+let searchTimer   = null;
+let searchPending = false;
+let wishlist      = loadWishlist();
+
+// ─────────────────────────────────────────────
+// PERSISTENCE
+// ─────────────────────────────────────────────
+function loadCart() {
+  try {
+    const raw = localStorage.getItem('mv_cart');
+    const parsed = raw ? JSON.parse(raw) : [];
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (_) { return []; }
+}
+function saveCart() {
+  localStorage.setItem('mv_cart', JSON.stringify(cart));
+}
+function loadWishlist() {
+  try {
+    const raw = localStorage.getItem('mv_wishlist');
+    const parsed = raw ? JSON.parse(raw) : [];
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (_) { return []; }
+}
+function saveWishlist() {
+  localStorage.setItem('mv_wishlist', JSON.stringify(wishlist));
+}
+
+// ─────────────────────────────────────────────
+// UTILITIES
+// ─────────────────────────────────────────────
+function fmt(n) {
+  // Indian number formatting with ₹
+  return '₹' + Number(n).toLocaleString('en-IN');
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(function () { t.classList.remove('show'); }, 2800);
+}
+
+// ─────────────────────────────────────────────
+// PRODUCT FILTERING & SORTING (R6, R7)
+// ─────────────────────────────────────────────
+function getDisplayList(ids) {
+  // ids: null = no search filter active, array = search results
+  let list = PRODUCTS.slice();
+
+  // Category filter
+  if (activeCategory !== 'all') {
+    list = list.filter(function (p) { return p.category === activeCategory; });
+  }
+
+  // Search filter (by id set from API)
+  if (ids !== null) {
+    list = list.filter(function (p) { return ids.indexOf(p.id) !== -1; });
+  }
+
+  // Sort — sold-out always last (R6)
+  const inStock  = list.filter(function (p) { return p.stock > 0; });
+  const soldOut  = list.filter(function (p) { return p.stock === 0; });
+
+  function comparator(a, b) {
+    switch (activeSortValue) {
+      case 'low':    return a.price - b.price;
+      case 'high':   return b.price - a.price;
+      case 'name':   return a.name.localeCompare(b.name);
+      case 'rating':
+        const ra = a.rating || 0, rb = b.rating || 0;
+        return rb - ra;
+      default: return 0;
+    }
+  }
+
+  inStock.sort(comparator);
+  soldOut.sort(comparator);
+  return inStock.concat(soldOut);
+}
+
+// ─────────────────────────────────────────────
+// RENDER PRODUCTS
+// ─────────────────────────────────────────────
+function renderProducts(ids) {
+  const list = getDisplayList(ids);
+  const grid = document.getElementById('product-grid');
+  const counter = document.getElementById('results-count');
+
+  counter.textContent = list.length + ' product' + (list.length !== 1 ? 's' : '');
+
+  if (list.length === 0) {
+    grid.innerHTML = '<div class="no-results">No teas found. Try a different filter or search term.</div>';
+    return;
+  }
+
+  grid.innerHTML = list.map(function (p) {
+    const oos = p.stock === 0;
+    const liked = wishlist.indexOf(p.id) !== -1;
+    const starsHtml = renderStars(p.rating, p.reviews);
+    return [
+      '<article class="product-card' + (oos ? ' oos' : '') + '" data-id="' + p.id + '">',
+        '<div class="card-img-wrap">',
+          '<img src="' + p.image + '" alt="' + escHtml(p.name) + '" loading="lazy">',
+          oos
+            ? '<span class="card-badge badge-oos" aria-label="Sold out">Sold out</span>'
+            : '',
+          '<button class="quick-view-btn" onclick="openQuickView(' + p.id + ')" aria-label="Quick view ' + escHtml(p.name) + '">Quick view</button>',
+          '<button class="wishlist-btn' + (liked ? ' liked' : '') + '" onclick="toggleWish(' + p.id + ')" aria-label="' + (liked ? 'Remove from' : 'Add to') + ' wishlist: ' + escHtml(p.name) + '" aria-pressed="' + liked + '">',
+            '<svg width="16" height="16" viewBox="0 0 24 24" fill="' + (liked ? 'currentColor' : 'none') + '" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>',
+          '</button>',
+        '</div>',
+        '<div class="card-body">',
+          '<span class="card-category">' + escHtml(p.category) + '</span>',
+          '<h3 class="card-name">' + escHtml(p.name) + '</h3>',
+          '<p class="card-desc">' + escHtml(p.desc) + '</p>',
+          starsHtml,
+          '<div class="card-price">' + fmt(p.price) + ' <span style="font-size:12px;font-weight:400;color:#888">per pack</span></div>',
+        '</div>',
+        '<div class="card-footer">',
+          '<button class="add-cart-btn" onclick="addToCart(' + p.id + ')"' + (oos ? ' disabled aria-disabled="true"' : '') + '>',
+            oos ? 'Out of stock' : 'Add to cart',
+          '</button>',
+        '</div>',
+      '</article>'
+    ].join('');
+  }).join('');
+}
+
+function renderStars(rating, reviews) {
+  if (!rating) return '';
+  const full = Math.round(rating);
+  let s = '<div class="card-rating">';
+  s += '<span class="stars-filled" aria-hidden="true">';
+  for (let i = 0; i < 5; i++) {
+    s += i < full
+      ? '<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>'
+      : '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>';
+  }
+  s += '</span>';
+  s += '<span style="font-size:13px;color:#555">' + rating.toFixed(1) + ' <span style="color:#aaa">(' + reviews + ')</span></span>';
+  s += '</div>';
+  return s;
+}
+
+function escHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+// ─────────────────────────────────────────────
+// FILTERS, SORT & SEARCH (R7 — all work together)
+// ─────────────────────────────────────────────
+document.querySelectorAll('.chip').forEach(function (chip) {
+  chip.addEventListener('click', function () {
+    document.querySelectorAll('.chip').forEach(function (c) {
+      c.classList.remove('active');
+      c.setAttribute('aria-pressed', 'false');
+    });
+    chip.classList.add('active');
+    chip.setAttribute('aria-pressed', 'true');
+    activeCategory = chip.dataset.cat;
+    triggerSearch();
+  });
+});
+
+document.getElementById('sort-select').addEventListener('change', function () {
+  activeSortValue = this.value;
+  triggerSearch();
+});
+
+document.getElementById('search-input').addEventListener('input', function () {
+  searchQuery = this.value.trim();
+  clearTimeout(searchTimer);
+  if (!searchQuery) {
+    triggerSearch();
+    return;
+  }
+  searchTimer = setTimeout(function () { triggerSearch(); }, 120);
+});
+
+function triggerSearch() {
+  if (!searchQuery) {
+    renderProducts(null);
+    return;
+  }
+  API.search(searchQuery).then(function (ids) {
+    // Only apply if this is still the current query (prevents stale renders)
+    renderProducts(ids);
+  });
+}
+
+// ─────────────────────────────────────────────
+// WISHLIST
+// ─────────────────────────────────────────────
+function toggleWish(id) {
+  const idx = wishlist.indexOf(id);
+  if (idx === -1) {
+    wishlist.push(id);
+    showToast('Added to wishlist');
+  } else {
+    wishlist.splice(idx, 1);
+    showToast('Removed from wishlist');
+  }
+  saveWishlist();
+  // Re-render only the affected card's button
+  const card = document.querySelector('.product-card[data-id="' + id + '"]');
+  if (card) {
+    const btn = card.querySelector('.wishlist-btn');
+    const liked = wishlist.indexOf(id) !== -1;
+    btn.classList.toggle('liked', liked);
+    btn.setAttribute('aria-pressed', liked);
+    btn.setAttribute('aria-label', (liked ? 'Remove from' : 'Add to') + ' wishlist: ' + escHtml(PRODUCTS.find(function(p){return p.id===id;}).name));
+    btn.querySelector('svg').setAttribute('fill', liked ? 'currentColor' : 'none');
+  }
+}
+
+// ─────────────────────────────────────────────
+// QUICK VIEW
+// ─────────────────────────────────────────────
+function openQuickView(id) {
+  const p = PRODUCTS.find(function (x) { return x.id === id; });
+  if (!p) return;
+  const oos = p.stock === 0;
+  const starsHtml = renderStars(p.rating, p.reviews);
+  const stockLabel = oos ? 'Out of stock' : (p.stock <= 5 ? 'Only ' + p.stock + ' left' : 'In stock');
+
+  document.getElementById('qv-inner').innerHTML = [
+    '<img class="modal-img" src="' + p.image + '" alt="' + escHtml(p.name) + '">',
+    '<div class="modal-body">',
+      '<span class="modal-category">' + escHtml(p.category) + '</span>',
+      '<h2 class="modal-name" id="qv-name">' + escHtml(p.name) + '</h2>',
+      '<p class="modal-desc">' + escHtml(p.desc) + '</p>',
+      starsHtml,
+      '<div class="modal-price">' + fmt(p.price) + '</div>',
+      '<div class="modal-stock" style="color:' + (oos ? 'var(--error)' : p.stock <= 5 ? 'var(--saffron)' : 'var(--leaf)') + '">' + stockLabel + '</div>',
+      '<div class="modal-add-btn">',
+        '<button class="btn-primary" style="width:100%" onclick="addToCart(' + id + ');closeQuickView()"' + (oos ? ' disabled' : '') + '>',
+          oos ? 'Out of stock' : 'Add to cart',
+        '</button>',
+      '</div>',
+    '</div>'
+  ].join('');
+
+  const backdrop = document.getElementById('quickview-backdrop');
+  backdrop.classList.add('open');
+  backdrop.focus();
+}
+
+function closeQuickView() {
+  document.getElementById('quickview-backdrop').classList.remove('open');
+}
+
+document.getElementById('qv-close').addEventListener('click', closeQuickView);
+document.getElementById('quickview-backdrop').addEventListener('click', function (e) {
+  if (e.target === this) closeQuickView();
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    closeQuickView();
+    closeCart();
+  }
+});
+
+// ─────────────────────────────────────────────
+// CART — open/close
+// ─────────────────────────────────────────────
+function openCart() {
+  document.getElementById('cart-drawer').classList.add('open');
+  document.getElementById('cart-overlay').classList.add('open');
+  document.getElementById('cart-toggle-btn').setAttribute('aria-expanded', 'true');
+  document.getElementById('cart-drawer').focus();
+  renderCart();
+}
+function closeCart() {
+  document.getElementById('cart-drawer').classList.remove('open');
+  document.getElementById('cart-overlay').classList.remove('open');
+  document.getElementById('cart-toggle-btn').setAttribute('aria-expanded', 'false');
+}
+document.getElementById('cart-toggle-btn').addEventListener('click', openCart);
+document.getElementById('cart-close-btn').addEventListener('click', closeCart);
+document.getElementById('cart-overlay').addEventListener('click', closeCart);
+
+// ─────────────────────────────────────────────
+// CART — add / update / remove (R1, R2, R6)
+// ─────────────────────────────────────────────
+function addToCart(id) {
+  const p = PRODUCTS.find(function (x) { return x.id === id; });
+  if (!p || p.stock === 0) return; // R6: never add sold-out
+
+  const existing = cart.find(function (c) { return c.id === id; });
+  const currentQty = existing ? existing.qty : 0;
+  const maxAllowed = Math.min(MAX_QTY_PER_ITEM, p.stock); // R2
+
+  if (currentQty >= maxAllowed) {
+    showToast('Maximum ' + maxAllowed + ' per order');
+    return;
+  }
+
+  if (existing) {
+    existing.qty += 1;
+  } else {
+    // R1: price comes from PRODUCTS, not DOM
+    cart.push({ id: p.id, name: p.name, price: p.price, qty: 1 });
+  }
+
+  saveCart();
+  updateCartCount();
+  showToast(p.name + ' added to cart');
+  if (document.getElementById('cart-drawer').classList.contains('open')) {
+    renderCart();
+  }
+}
+
+function setQty(id, qty) {
+  const p = PRODUCTS.find(function (x) { return x.id === id; });
+  if (!p) return;
+  const maxAllowed = Math.min(MAX_QTY_PER_ITEM, p.stock);
+  const item = cart.find(function (c) { return c.id === id; });
+  if (!item) return;
+
+  if (qty < 1) {
+    removeFromCart(id);
+    return;
+  }
+  item.qty = Math.min(qty, maxAllowed);
+  saveCart();
+  renderCart();
+}
+
+function removeFromCart(id) {
+  cart = cart.filter(function (c) { return c.id !== id; });
+  saveCart();
+  updateCartCount();
+  renderCart();
+}
+
+function updateCartCount() {
+  const total = cart.reduce(function (sum, c) { return sum + c.qty; }, 0);
+  const el = document.getElementById('cart-count');
+  el.textContent = total;
+  document.getElementById('cart-toggle-btn').setAttribute('aria-label', 'Open cart, ' + total + ' item' + (total !== 1 ? 's' : ''));
+}
+
+// ─────────────────────────────────────────────
+// CART — coupon logic (R3)
+// ─────────────────────────────────────────────
+function calcEligibleSubtotal() {
+  return cart.reduce(function (sum, c) {
+    const p = PRODUCTS.find(function (x) { return x.id === c.id; });
+    if (!p || p.category === 'Gifts') return sum; // Gifts not eligible
+    return sum + p.price * c.qty;
+  }, 0);
+}
+
+function calcDiscount() {
+  if (!appliedCoupon) return 0;
+  const sub = subtotal();
+  if (sub < COUPON_MIN_SUBTOTAL) return 0; // R3: min subtotal
+  const eligible = calcEligibleSubtotal();
+  const raw = eligible * COUPON_RATE;
+  return Math.min(raw, COUPON_CAP); // R3: cap at ₹150
+}
+
+function subtotal() {
+  // R1: always from PRODUCTS prices
+  return cart.reduce(function (sum, c) {
+    const p = PRODUCTS.find(function (x) { return x.id === c.id; });
+    return sum + (p ? p.price * c.qty : 0);
+  }, 0);
+}
+
+function applyCoupon() {
+  const raw = document.getElementById('coupon-input').value.trim().toUpperCase(); // case-insensitive
+  const msgEl = document.getElementById('coupon-msg');
+
+  if (raw !== COUPON_CODE) {
+    msgEl.textContent = 'That code is not valid.';
+    msgEl.className = 'coupon-msg error';
+    return;
+  }
+
+  // Already applied — applying again changes nothing (R3)
+  if (appliedCoupon === COUPON_CODE) {
+    msgEl.textContent = 'Code WELCOME10 is already applied.';
+    msgEl.className = 'coupon-msg';
+    return;
+  }
+
+  const sub = subtotal();
+  if (sub < COUPON_MIN_SUBTOTAL) {
+    msgEl.textContent = 'Minimum order of ' + fmt(COUPON_MIN_SUBTOTAL) + ' required for this code.';
+    msgEl.className = 'coupon-msg error';
+    return;
+  }
+
+  const eligible = calcEligibleSubtotal();
+  if (eligible === 0) {
+    msgEl.textContent = 'WELCOME10 does not apply to gift boxes.';
+    msgEl.className = 'coupon-msg error';
+    return;
+  }
+
+  appliedCoupon = COUPON_CODE;
+  const disc = calcDiscount();
+  msgEl.textContent = 'Code applied — you save ' + fmt(Math.round(disc)) + '.';
+  msgEl.className = 'coupon-msg success';
+  renderCart();
+}
+
+// ─────────────────────────────────────────────
+// CART — render
+// ─────────────────────────────────────────────
+function renderCart() {
+  const bodyEl  = document.getElementById('cart-body');
+  const totalsEl = document.getElementById('cart-totals');
+  const checkoutBtn = document.getElementById('checkout-btn');
+
+  if (cart.length === 0) {
+    bodyEl.innerHTML = [
+      '<div class="cart-empty">',
+        '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>',
+        '<p>Your cart is empty.</p>',
+        '<a href="#shop" class="btn-secondary btn-sm" style="margin-top:12px" onclick="closeCart()">Browse teas</a>',
+      '</div>'
+    ].join('');
+    totalsEl.innerHTML = '';
+    checkoutBtn.disabled = true;
+    updateShipBar(0);
+    return;
+  }
+
+  checkoutBtn.disabled = false;
+
+  // Shipping bar
+  const sub      = subtotal();
+  const disc     = calcDiscount();
+  const afterDisc = sub - disc;
+  const shipping = afterDisc >= FREE_SHIPPING_THRESHOLD ? 0 : SHIPPING_COST; // R4: based on post-discount amount
+  const total    = afterDisc + shipping;
+
+  updateShipBar(afterDisc);
+
+  bodyEl.innerHTML = cart.map(function (c) {
+    const p = PRODUCTS.find(function (x) { return x.id === c.id; });
+    const maxAllowed = p ? Math.min(MAX_QTY_PER_ITEM, p.stock) : 1;
+    const linePrice  = p ? p.price * c.qty : c.price * c.qty; // R1
+    return [
+      '<div class="cart-item">',
+        '<img class="cart-item-img" src="' + (p ? p.image : '') + '" alt="' + escHtml(c.name) + '" loading="lazy">',
+        '<div>',
+          '<div class="cart-item-name">' + escHtml(c.name) + '</div>',
+          '<div class="cart-item-price">' + fmt(p ? p.price : c.price) + ' each</div>',
+          '<div class="cart-qty-wrap">',
+            '<button class="qty-btn" onclick="setQty(' + c.id + ',' + (c.qty - 1) + ')" aria-label="Decrease quantity" ' + (c.qty <= 1 ? 'disabled' : '') + '>−</button>',
+            '<span class="qty-display" aria-label="Quantity: ' + c.qty + '">' + c.qty + '</span>',
+            '<button class="qty-btn" onclick="setQty(' + c.id + ',' + (c.qty + 1) + ')" aria-label="Increase quantity" ' + (c.qty >= maxAllowed ? 'disabled' : '') + '>+</button>',
+          '</div>',
+          '<button class="cart-remove" onclick="removeFromCart(' + c.id + ')">Remove</button>',
+        '</div>',
+        '<div class="cart-item-line-price">' + fmt(linePrice) + '</div>',
+      '</div>'
+    ].join('');
+  }).join('');
+
+  // Totals (R5: Indian formatting, round only final total)
+  let totalsHtml = [
+    '<div class="totals-row"><span>Subtotal</span><span>' + fmt(sub) + '</span></div>',
+  ].join('');
+  if (disc > 0) {
+    totalsHtml += '<div class="totals-row discount"><span>Discount (WELCOME10)</span><span>−' + fmt(disc) + '</span></div>';
+  }
+  totalsHtml += '<div class="totals-row"><span>Shipping</span><span>' + (shipping === 0 ? 'Free' : fmt(shipping)) + '</span></div>';
+  totalsHtml += '<div class="totals-row total"><span>Total</span><span>' + fmt(Math.round(total)) + '</span></div>'; // R5: round only final
+  totalsEl.innerHTML = totalsHtml;
+}
+
+function updateShipBar(afterDiscAmt) {
+  const pct = Math.min((afterDiscAmt / FREE_SHIPPING_THRESHOLD) * 100, 100);
+  const fill = document.getElementById('ship-fill');
+  const msg  = document.getElementById('ship-msg');
+  if (!fill || !msg) return;
+  fill.style.width = pct + '%';
+  if (afterDiscAmt >= FREE_SHIPPING_THRESHOLD) {
+    msg.textContent = 'You have free shipping.';
+  } else {
+    msg.textContent = 'Add ' + fmt(FREE_SHIPPING_THRESHOLD - afterDiscAmt) + ' more for free shipping.';
+  }
+}
+
+// ─────────────────────────────────────────────
+// CHECKOUT (form contract)
+// ─────────────────────────────────────────────
+function doCheckout() {
+  if (cart.length === 0) return;
+  const items = cart.map(function (c) { return { id: c.id, qty: c.qty }; });
+  document.getElementById('form-items').value = JSON.stringify(items);
+  document.getElementById('form-coupon').value = appliedCoupon || '';
+  document.getElementById('checkout-form').submit();
+}
+
+// ─────────────────────────────────────────────
+// DELIVERY CHECK (R8)
+// ─────────────────────────────────────────────
+function checkPin() {
+  const pin   = document.getElementById('pin-input').value.trim();
+  const resEl = document.getElementById('pin-result');
+  const btn   = document.getElementById('pin-check-btn');
+  const input = document.getElementById('pin-input');
+
+  resEl.textContent = 'Checking…';
+  resEl.className = '';
+  input.classList.remove('error-state');
+  btn.disabled = true;
+
+  API.checkPincode(pin)
+    .then(function (r) {
+      btn.disabled = false;
+      if (r.serviceable) {
+        resEl.textContent = 'Great news — we deliver to ' + pin + ' in about ' + r.days + ' working day' + (r.days !== 1 ? 's' : '') + '.';
+        resEl.className = 'success';
+      } else {
+        resEl.textContent = 'We do not currently deliver to pincode ' + pin + '. We are expanding — check back soon.';
+        resEl.className = 'error';
+      }
+    })
+    .catch(function (err) {
+      btn.disabled = false;
+      if (err.message === 'INVALID_PINCODE') {
+        resEl.textContent = 'Please enter a valid 6-digit pincode (e.g. 700001).';
+        resEl.className = 'error';
+        input.classList.add('error-state');
+      } else {
+        resEl.textContent = 'Something went wrong. Please try again in a moment.';
+        resEl.className = 'error';
+      }
+    });
+}
+
+document.getElementById('pin-input').addEventListener('keydown', function (e) {
+  if (e.key === 'Enter') checkPin();
+});
+
+// ─────────────────────────────────────────────
+// FAQ ACCORDION
+// ─────────────────────────────────────────────
+const FAQS = [
+  { q: 'How long does delivery take?', a: '2 to 5 working days depending on your pincode. Use the delivery check above to see yours.' },
+  { q: 'Can I return tea?', a: 'Unopened packs can be returned within 7 days of delivery. Opened tea cannot be returned for hygiene reasons.' },
+  { q: 'How should I store my tea?', a: 'In an airtight container, away from light, heat and strong smells. It tastes best within 6 months of opening.' },
+  { q: 'Is Chamomile & Tulsi caffeine-free?', a: 'Yes, it is a caffeine-free herbal blend.' },
+  { q: 'Do you ship outside India?', a: 'Not yet. We currently deliver within India only.' },
+  { q: 'Can I send tea as a gift?', a: 'Yes. The Tea Lover\'s Sampler comes in a wooden gift box with a brewing guide.' }
+];
+
+(function buildFaq() {
+  const list = document.getElementById('faq-list');
+  list.innerHTML = FAQS.map(function (item, i) {
+    const pid = 'faq-panel-' + i;
+    const bid = 'faq-btn-' + i;
+    return [
+      '<div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">',
+        '<button class="faq-question" id="' + bid + '" aria-expanded="false" aria-controls="' + pid + '" itemprop="name">',
+          escHtml(item.q),
+          '<svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>',
+        '</button>',
+        '<div class="faq-answer" id="' + pid + '" role="region" aria-labelledby="' + bid + '" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">',
+          '<div class="faq-answer-inner" itemprop="text">' + escHtml(item.a) + '</div>',
+        '</div>',
+      '</div>'
+    ].join('');
+  }).join('');
+
+  // Accordion behaviour
+  list.querySelectorAll('.faq-question').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      // Close all
+      list.querySelectorAll('.faq-question').forEach(function (b) {
+        b.setAttribute('aria-expanded', 'false');
+        const panel = document.getElementById(b.getAttribute('aria-controls'));
+        panel.style.maxHeight = '0';
+      });
+      // Open clicked if it was closed
+      if (!expanded) {
+        this.setAttribute('aria-expanded', 'true');
+        const panel = document.getElementById(this.getAttribute('aria-controls'));
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+})();
+
+// ─────────────────────────────────────────────
+// NEWSLETTER
+// ─────────────────────────────────────────────
+function subscribe() {
+  const emailEl = document.getElementById('nl-email');
+  const msgEl   = document.getElementById('nl-msg');
+  const email   = emailEl.value.trim();
+  const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  emailEl.classList.remove('error-state');
+  msgEl.className = '';
+
+  if (!email) {
+    msgEl.textContent = 'Please enter your email address.';
+    msgEl.className = 'error';
+    emailEl.classList.add('error-state');
+    emailEl.focus();
+    return;
+  }
+  if (!emailRx.test(email)) {
+    msgEl.textContent = 'Please enter a valid email address.';
+    msgEl.className = 'error';
+    emailEl.classList.add('error-state');
+    emailEl.focus();
+    return;
+  }
+
+  msgEl.textContent = 'Thank you — check your inbox for a confirmation.';
+  msgEl.className = 'success';
+  emailEl.value = '';
+  emailEl.disabled = true;
+  document.querySelector('.nl-btn').disabled = true;
+}
+
+// ─────────────────────────────────────────────
+// MOBILE NAV TOGGLE
+// ─────────────────────────────────────────────
+document.getElementById('nav-toggle').addEventListener('click', function () {
+  const nav  = document.getElementById('main-nav');
+  const open = nav.classList.toggle('open');
+  this.setAttribute('aria-expanded', open);
+});
+document.querySelectorAll('#main-nav a').forEach(function (a) {
+  a.addEventListener('click', function () {
+    document.getElementById('main-nav').classList.remove('open');
+    document.getElementById('nav-toggle').setAttribute('aria-expanded', 'false');
+  });
+});
+
+// ─────────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────────
+renderProducts(null);
+updateCartCount();
+
+// Shipping bar init (renders even before cart is opened)
+(function () {
+  const bodyEl = document.getElementById('cart-body');
+  const sub = subtotal();
+  const disc = calcDiscount();
+  const afterDisc = sub - disc;
+  updateShipBar(afterDisc);
+})();
+</script>
+
+<!-- ── JSON-LD Structured Data ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "OnlineStore",
+      "@id": "https://mistvale.example/#organization",
+      "name": "Mistvale Tea Co.",
+      "url": "https://mistvale.example",
+      "logo": "https://mistvale.example/images/logo.svg",
+      "foundingDate": "2019",
+      "description": "Hill-grown tea, honestly made. Premium Indian teas sourced from single estates.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "14 Hill Cart Road",
+        "addressLocality": "Siliguri",
+        "addressRegion": "West Bengal",
+        "postalCode": "734001",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-90000-12345",
+        "email": "hello@mistvale.example",
+        "contactType": "customer service"
+      },
+      "sameAs": ["https://instagram.com/mistvale.example"]
+    },
+    {
+      "@type": "Product",
+      "name": "Assam Breakfast Black Tea",
+      "image": "https://mistvale.example/images/p101.svg",
+      "description": "Strong, malty CTC tea from Upper Assam estates. Perfect with milk and a little sugar in the morning.",
+      "sku": "101",
+      "brand": {"@type": "Brand", "name": "Mistvale Tea Co."},
+      "offers": {"@type": "Offer", "priceCurrency": "INR", "price": "349", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://mistvale.example/#shop"}
+    },
+    {
+      "@type": "Product",
+      "name": "Darjeeling First Flush",
+      "image": "https://mistvale.example/images/p102.svg",
+      "description": "Delicate, floral spring harvest leaves with a muscatel note. Best without milk.",
+      "sku": "102",
+      "brand": {"@type": "Brand", "name": "Mistvale Tea Co."},
+      "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "128"},
+      "offers": {"@type": "Offer", "priceCurrency": "INR", "price": "1299", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://mistvale.example/#shop"}
+    },
+    {
+      "@type": "Product",
+      "name": "Kashmiri Kahwa",
+      "image": "https://mistvale.example/images/p103.svg",
+      "description": "Green tea with saffron, cardamom, cinnamon and almond flakes.",
+      "sku": "103",
+      "brand": {"@type": "Brand", "name": "Mistvale Tea Co."},
+      "offers": {"@type": "Offer", "priceCurrency": "INR", "price": "549", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://mistvale.example/#shop"}
+    },
+    {
+      "@type": "Product",
+      "name": "Masala Chai Blend",
+      "image": "https://mistvale.example/images/p104.svg",
+      "description": "Bold Assam leaves with ginger, cardamom, clove and black pepper. Our bestseller.",
+      "sku": "104",
+      "brand": {"@type": "Brand", "name": "Mistvale Tea Co."},
+      "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "342"},
+      "offers": {"@type": "Offer", "priceCurrency": "INR", "price": "399", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://mistvale.example/#shop"}
+    },
+    {
+      "@type": "Product",
+      "name": "Nilgiri Green Tea",
+      "image": "https://mistvale.example/images/p105.svg",
+      "description": "Smooth, grassy green tea from the Blue Mountains of the south.",
+      "sku": "105",
+      "brand": {"@type": "Brand", "name": "Mistvale Tea Co."},
+      "offers": {"@type": "Offer", "priceCurrency": "INR", "price": "449", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://mistvale.example/#shop"}
+    },
+    {
+      "@type": "Product",
+      "name": "Chamomile & Tulsi",
+      "image": "https://mistvale.example/images/p106.svg",
+      "description": "Caffeine-free calming blend of chamomile flowers and holy basil.",
+      "sku": "106",
+      "brand": {"@type": "Brand", "name": "Mistvale Tea Co."},
+      "offers": {"@type": "Offer", "priceCurrency": "INR", "price": "499", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://mistvale.example/#shop"}
+    },
+    {
+      "@type": "Product",
+      "name": "Hibiscus Rose Infusion",
+      "image": "https://mistvale.example/images/p107.svg",
+      "description": "Tangy hibiscus with rose petals. Lovely iced.",
+      "sku": "107",
+      "brand": {"@type": "Brand", "name": "Mistvale Tea Co."},
+      "offers": {"@type": "Offer", "priceCurrency": "INR", "price": "599", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/OutOfStock", "url": "https://mistvale.example/#shop"}
+    },
+    {
+      "@type": "Product",
+      "name": "Tea Lover's Sampler Gift Box",
+      "image": "https://mistvale.example/images/p108.svg",
+      "description": "Six of our favourite teas in a wooden gift box with a brewing guide.",
+      "sku": "108",
+      "brand": {"@type": "Brand", "name": "Mistvale Tea Co."},
+      "offers": {"@type": "Offer", "priceCurrency": "INR", "price": "1899", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://mistvale.example/#shop"}
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "How long does delivery take?", "acceptedAnswer": {"@type": "Answer", "text": "2 to 5 working days depending on your pincode. Use the delivery check to see yours."}},
+        {"@type": "Question", "name": "Can I return tea?", "acceptedAnswer": {"@type": "Answer", "text": "Unopened packs can be returned within 7 days of delivery. Opened tea cannot be returned for hygiene reasons."}},
+        {"@type": "Question", "name": "How should I store my tea?", "acceptedAnswer": {"@type": "Answer", "text": "In an airtight container, away from light, heat and strong smells. It tastes best within 6 months of opening."}},
+        {"@type": "Question", "name": "Is Chamomile & Tulsi caffeine-free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, it is a caffeine-free herbal blend."}},
+        {"@type": "Question", "name": "Do you ship outside India?", "acceptedAnswer": {"@type": "Answer", "text": "Not yet. We currently deliver within India only."}},
+        {"@type": "Question", "name": "Can I send tea as a gift?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The Tea Lover's Sampler comes in a wooden gift box with a brewing guide."}}
+      ]
+    }
+  ]
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Chamomile and Tulsi — soft white herbal tea pouch">
+  <title>Chamomile &amp; Tulsi</title>
+  <!-- Background: soft white/lavender stone -->
+  <rect width="400" height="400" fill="#ede8e0"/>
+  <!-- Soft radial glow -->
+  <radialGradient id="bg106" cx="50%" cy="40%" r="55%">
+    <stop offset="0%" stop-color="#f8f2e6"/>
+    <stop offset="100%" stop-color="#ddd5c4"/>
+  </radialGradient>
+  <rect width="400" height="400" fill="url(#bg106)"/>
+  <!-- Shadow -->
+  <ellipse cx="200" cy="358" rx="106" ry="15" fill="#c0b498" opacity="0.4"/>
+  <!-- Pouch — soft white/cream -->
+  <rect x="124" y="100" width="152" height="228" rx="12" fill="#f0ebe0"/>
+  <rect x="124" y="100" width="152" height="228" rx="12" fill="none" stroke="#d4c9ae" stroke-width="1.5"/>
+  <!-- Top seal — sage green -->
+  <rect x="134" y="94" width="132" height="14" rx="7" fill="#7a9e70"/>
+  <!-- Gusset -->
+  <path d="M134 308 Q134 336 160 336 L240 336 Q266 336 266 308 Z" fill="#d4c9ae"/>
+  <!-- Chamomile flowers scattered on pouch -->
+  <!-- Flower 1 -->
+  <circle cx="168" cy="148" r="6" fill="#f6f1e7"/>
+  <circle cx="168" cy="148" r="3" fill="#d9962b"/>
+  <ellipse cx="168" cy="139" rx="3" ry="5" fill="#fff" opacity="0.9"/>
+  <ellipse cx="168" cy="157" rx="3" ry="5" fill="#fff" opacity="0.9"/>
+  <ellipse cx="159" cy="148" rx="5" ry="3" fill="#fff" opacity="0.9"/>
+  <ellipse cx="177" cy="148" rx="5" ry="3" fill="#fff" opacity="0.9"/>
+  <ellipse cx="162" cy="142" rx="3" ry="5" fill="#f8f0d0" opacity="0.8" transform="rotate(45 162 142)"/>
+  <ellipse cx="174" cy="154" rx="3" ry="5" fill="#f8f0d0" opacity="0.8" transform="rotate(45 174 154)"/>
+  <!-- Flower 2 -->
+  <circle cx="236" cy="136" r="5" fill="#f6f1e7"/>
+  <circle cx="236" cy="136" r="2.5" fill="#d9962b"/>
+  <ellipse cx="236" cy="128" rx="2.5" ry="4.5" fill="#fff" opacity="0.85"/>
+  <ellipse cx="236" cy="144" rx="2.5" ry="4.5" fill="#fff" opacity="0.85"/>
+  <ellipse cx="228" cy="136" rx="4.5" ry="2.5" fill="#fff" opacity="0.85"/>
+  <ellipse cx="244" cy="136" rx="4.5" ry="2.5" fill="#fff" opacity="0.85"/>
+  <!-- Tulsi (holy basil) leaves -->
+  <ellipse cx="155" cy="300" rx="14" ry="8" fill="#5a8a50" transform="rotate(-25 155 300)" opacity="0.75"/>
+  <ellipse cx="245" cy="295" rx="14" ry="8" fill="#4f7942" transform="rotate(30 245 295)" opacity="0.7"/>
+  <ellipse cx="185" cy="312" rx="11" ry="6" fill="#4f7942" transform="rotate(-10 185 312)" opacity="0.65"/>
+  <ellipse cx="215" cy="308" rx="11" ry="6" fill="#5a8a50" transform="rotate(15 215 308)" opacity="0.65"/>
+  <!-- Cream label area -->
+  <rect x="132" y="160" width="136" height="118" rx="8" fill="#faf8f2"/>
+  <rect x="132" y="160" width="136" height="118" rx="8" fill="none" stroke="#e0d8c8" stroke-width="1"/>
+  <!-- Soft sage band at label top -->
+  <rect x="132" y="160" width="136" height="20" rx="8" fill="#7a9e70"/>
+  <rect x="132" y="170" width="136" height="10" fill="#7a9e70"/>
+  <!-- Label text -->
+  <text x="200" y="174" font-family="Arial, sans-serif" font-size="8" fill="#f6f1e7" text-anchor="middle" letter-spacing="1.5">MISTVALE TEA CO.</text>
+  <text x="200" y="200" font-family="Georgia, serif" font-size="11" font-weight="700" fill="#1f3d2b" text-anchor="middle" letter-spacing="0.5">CHAMOMILE</text>
+  <text x="200" y="216" font-family="Georgia, serif" font-size="10" fill="#4f7942" text-anchor="middle">&amp; Tulsi</text>
+  <text x="200" y="232" font-family="Arial, sans-serif" font-size="9" fill="#888" text-anchor="middle">Caffeine-free · Herbal</text>
+  <!-- Divider -->
+  <line x1="148" y1="240" x2="252" y2="240" stroke="#e0d8c8" stroke-width="1"/>
+  <!-- Mini chamomile icon -->
+  <circle cx="200" cy="258" r="7" fill="#f6f1e7" stroke="#e0d0a0" stroke-width="1"/>
+  <circle cx="200" cy="258" r="3" fill="#d9962b"/>
+  <ellipse cx="200" cy="248" rx="2.5" ry="4.5" fill="#fff"/>
+  <ellipse cx="200" cy="268" rx="2.5" ry="4.5" fill="#fff"/>
+  <ellipse cx="190" cy="258" rx="4.5" ry="2.5" fill="#fff"/>
+  <ellipse cx="210" cy="258" rx="4.5" ry="2.5" fill="#fff"/>
+  <!-- Weight -->
+  <text x="200" y="320" font-family="Arial, sans-serif" font-size="9" fill="#777" text-anchor="middle">20 bags · Herbal Blend</text>
+</svg>

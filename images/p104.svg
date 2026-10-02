@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Masala Chai Blend — warm spiced tea pouch">
+  <title>Masala Chai Blend</title>
+  <!-- Background: warm cream/terracotta -->
+  <rect width="400" height="400" fill="#ede0cc"/>
+  <!-- Subtle warm circles -->
+  <circle cx="340" cy="340" r="80" fill="#d4b888" opacity="0.2"/>
+  <circle cx="60" cy="60" r="60" fill="#d4b888" opacity="0.15"/>
+  <!-- Shadow -->
+  <ellipse cx="200" cy="358" rx="108" ry="16" fill="#b09870" opacity="0.45"/>
+  <!-- Pouch body — warm earthy red -->
+  <rect x="122" y="98" width="156" height="230" rx="12" fill="#8B3A22"/>
+  <!-- Sheen -->
+  <rect x="126" y="102" width="54" height="222" rx="8" fill="#a04428" opacity="0.45"/>
+  <!-- Top seal -->
+  <rect x="132" y="92" width="136" height="14" rx="7" fill="#6a2818"/>
+  <!-- Gusset -->
+  <path d="M132 310 Q132 338 160 338 L240 338 Q268 338 268 310 Z" fill="#6a2818"/>
+  <!-- Cream label band -->
+  <rect x="130" y="152" width="140" height="130" rx="8" fill="#f6f1e7"/>
+  <!-- Spice header band -->
+  <rect x="130" y="152" width="140" height="26" rx="8" fill="#d9962b"/>
+  <rect x="130" y="166" width="140" height="12" fill="#d9962b"/>
+  <!-- Product name on cream -->
+  <text x="200" y="204" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#1f3d2b" text-anchor="middle" letter-spacing="0.5">MASALA CHAI</text>
+  <text x="200" y="220" font-family="Georgia, serif" font-size="9" fill="#4f7942" text-anchor="middle" letter-spacing="2">BLEND</text>
+  <text x="200" y="235" font-family="Arial, sans-serif" font-size="9" fill="#888" text-anchor="middle">★ Bestseller ★</text>
+  <!-- Divider -->
+  <line x1="146" y1="243" x2="254" y2="243" stroke="#d4c9ae" stroke-width="1"/>
+  <!-- Spice illustrations on cream -->
+  <!-- Ginger slice -->
+  <ellipse cx="175" cy="260" rx="12" ry="8" fill="#d4a044" opacity="0.8"/>
+  <line x1="168" y1="256" x2="182" y2="264" stroke="#b08030" stroke-width="0.8" opacity="0.5"/>
+  <!-- Cardamom -->
+  <ellipse cx="200" cy="256" rx="7" ry="11" fill="#4f7942" opacity="0.85"/>
+  <!-- Clove -->
+  <circle cx="220" cy="253" r="4" fill="#3d2010" opacity="0.75"/>
+  <rect x="218" y="257" width="4" height="10" rx="2" fill="#3d2010" opacity="0.7"/>
+  <!-- Black pepper -->
+  <circle cx="185" cy="274" r="4" fill="#222" opacity="0.6"/>
+  <circle cx="215" cy="272" r="3.5" fill="#222" opacity="0.55"/>
+  <circle cx="200" cy="270" r="3" fill="#222" opacity="0.5"/>
+  <!-- Rating -->
+  <text x="200" y="167" font-family="Arial" font-size="9" fill="#f6f1e7" text-anchor="middle" letter-spacing="1">MISTVALE · 4.7★ · 342 reviews</text>
+  <!-- Top area spice hint -->
+  <ellipse cx="165" cy="130" rx="12" ry="5" fill="#d4a044" opacity="0.5" transform="rotate(-15 165 130)"/>
+  <ellipse cx="235" cy="126" rx="9" ry="4" fill="#4f7942" opacity="0.5" transform="rotate(20 235 126)"/>
+  <line x1="198" y1="118" x2="202" y2="148" stroke="#d9962b" stroke-width="1.5" opacity="0.4"/>
+  <!-- Weight -->
+  <text x="200" y="322" font-family="Arial, sans-serif" font-size="9" fill="#f0dcc8" text-anchor="middle" opacity="0.8">100 g · Black Tea</text>
+</svg>

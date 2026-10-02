@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Darjeeling First Flush — elegant white and gold tin">
+  <title>Darjeeling First Flush</title>
+  <!-- Background: soft mist/stone -->
+  <rect width="400" height="400" fill="#eee8d8"/>
+  <!-- Soft vignette -->
+  <radialGradient id="vg102" cx="50%" cy="50%" r="70%">
+    <stop offset="60%" stop-color="transparent"/>
+    <stop offset="100%" stop-color="#c8bfa8" stop-opacity="0.4"/>
+  </radialGradient>
+  <rect width="400" height="400" fill="url(#vg102)"/>
+  <!-- Surface shadow -->
+  <ellipse cx="200" cy="358" rx="108" ry="16" fill="#b0a688" opacity="0.45"/>
+  <!-- Tin body -->
+  <rect x="118" y="100" width="164" height="240" rx="6" fill="#f0ede4"/>
+  <rect x="118" y="100" width="164" height="240" rx="6" fill="none" stroke="#c8b87a" stroke-width="2.5"/>
+  <!-- Gold top lid -->
+  <rect x="114" y="94" width="172" height="30" rx="6" fill="#d9962b"/>
+  <rect x="114" y="94" width="172" height="30" rx="6" fill="none" stroke="#b07a10" stroke-width="1.5"/>
+  <!-- Lid highlight -->
+  <rect x="120" y="97" width="160" height="10" rx="4" fill="#e8b040" opacity="0.5"/>
+  <!-- Gold bottom band -->
+  <rect x="118" y="316" width="164" height="24" rx="4" fill="#d9962b" stroke="#b07a10" stroke-width="1.5"/>
+  <!-- Label: deep green stripe -->
+  <rect x="118" y="148" width="164" height="26" fill="#1f3d2b"/>
+  <!-- Floral watercolour effect (soft circles suggesting flowers) -->
+  <circle cx="200" cy="210" r="42" fill="#f8f3e8" opacity="0.6"/>
+  <circle cx="186" cy="200" r="9" fill="#d4c0a0" opacity="0.5"/>
+  <circle cx="214" cy="200" r="9" fill="#d4c0a0" opacity="0.5"/>
+  <circle cx="200" cy="214" r="9" fill="#cec0a0" opacity="0.5"/>
+  <circle cx="200" cy="192" r="8" fill="#d8cab0" opacity="0.5"/>
+  <!-- Leaf sprigs -->
+  <ellipse cx="164" cy="228" rx="16" ry="7" fill="#4f7942" transform="rotate(-40 164 228)" opacity="0.8"/>
+  <ellipse cx="236" cy="228" rx="16" ry="7" fill="#4f7942" transform="rotate(40 236 228)" opacity="0.8"/>
+  <ellipse cx="168" cy="248" rx="13" ry="6" fill="#3a6332" transform="rotate(-25 168 248)" opacity="0.7"/>
+  <ellipse cx="232" cy="248" rx="13" ry="6" fill="#3a6332" transform="rotate(25 232 248)" opacity="0.7"/>
+  <!-- Text on label stripe -->
+  <text x="200" y="165" font-family="Georgia, serif" font-size="9" fill="#f6f1e7" text-anchor="middle" letter-spacing="2.5">MISTVALE TEA CO.</text>
+  <!-- Product name -->
+  <text x="200" y="194" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#1f3d2b" text-anchor="middle" letter-spacing="0.5">DARJEELING</text>
+  <text x="200" y="211" font-family="Georgia, serif" font-size="11" fill="#4f7942" text-anchor="middle" letter-spacing="1">FIRST FLUSH</text>
+  <!-- Rating stars -->
+  <text x="200" y="270" font-family="Arial" font-size="13" fill="#d9962b" text-anchor="middle">★★★★★</text>
+  <text x="200" y="285" font-family="Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle">4.8 · 128 reviews</text>
+  <!-- Weight -->
+  <text x="200" y="329" font-family="Arial, sans-serif" font-size="10" fill="#f6f1e7" text-anchor="middle">100 g</text>
+  <!-- Tin lid text -->
+  <text x="200" y="113" font-family="Georgia, serif" font-size="10" fill="#f6f1e7" text-anchor="middle" letter-spacing="1">FIRST FLUSH 2026</text>
+</svg>

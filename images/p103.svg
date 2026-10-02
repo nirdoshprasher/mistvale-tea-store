@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Kashmiri Kahwa — green and saffron pouch with spices">
+  <title>Kashmiri Kahwa</title>
+  <!-- Background: stone/slate -->
+  <rect width="400" height="400" fill="#e4ddd0"/>
+  <!-- Stone texture dots -->
+  <circle cx="60" cy="60" r="1.5" fill="#cec5b0" opacity="0.5"/>
+  <circle cx="340" cy="80" r="1.5" fill="#cec5b0" opacity="0.5"/>
+  <circle cx="80" cy="320" r="1" fill="#cec5b0" opacity="0.4"/>
+  <circle cx="350" cy="340" r="1" fill="#cec5b0" opacity="0.4"/>
+  <!-- Shadow -->
+  <ellipse cx="200" cy="358" rx="105" ry="16" fill="#b0a488" opacity="0.4"/>
+  <!-- Stand-up pouch body -->
+  <!-- Gusset bottom -->
+  <path d="M130 310 Q130 340 160 340 L240 340 Q270 340 270 310 Z" fill="#1a3828"/>
+  <!-- Main pouch -->
+  <rect x="120" y="100" width="160" height="220" rx="14" fill="#1f3d2b"/>
+  <!-- Pouch sheen -->
+  <rect x="124" y="104" width="60" height="210" rx="10" fill="#2a5239" opacity="0.5"/>
+  <!-- Saffron gold band across middle -->
+  <rect x="120" y="185" width="160" height="50" fill="#d9962b" opacity="0.92"/>
+  <!-- Label on gold band -->
+  <text x="200" y="206" font-family="Georgia, serif" font-size="11" font-weight="700" fill="#1f3d2b" text-anchor="middle" letter-spacing="1">KASHMIRI</text>
+  <text x="200" y="224" font-family="Georgia, serif" font-size="9" fill="#1f3d2b" text-anchor="middle" letter-spacing="2">KAHWA</text>
+  <!-- Top seal -->
+  <rect x="130" y="95" width="140" height="14" rx="7" fill="#163020"/>
+  <!-- Spice illustrations: cardamom pods, saffron threads, cinnamon -->
+  <!-- Saffron threads (top area) -->
+  <line x1="170" y1="125" x2="165" y2="180" stroke="#d9962b" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+  <line x1="180" y1="120" x2="178" y2="178" stroke="#e8a030" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+  <line x1="190" y1="118" x2="192" y2="180" stroke="#d9962b" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+  <!-- Cardamom pods -->
+  <ellipse cx="230" cy="148" rx="8" ry="13" fill="#4f7942" opacity="0.9"/>
+  <line x1="230" y1="135" x2="230" y2="161" stroke="#3a5a30" stroke-width="0.8" opacity="0.6"/>
+  <ellipse cx="247" cy="160" rx="7" ry="11" fill="#4a7038" opacity="0.9"/>
+  <!-- Cinnamon stick -->
+  <rect x="222" y="155" width="6" height="28" rx="3" fill="#8B4513" opacity="0.75"/>
+  <rect x="230" y="162" width="6" height="22" rx="3" fill="#7a3a10" opacity="0.7"/>
+  <!-- Almond hint -->
+  <ellipse cx="165" cy="162" rx="10" ry="6" fill="#d4b480" opacity="0.8"/>
+  <!-- Bottom area: green leaves -->
+  <ellipse cx="175" cy="278" rx="18" ry="8" fill="#4f7942" transform="rotate(-20 175 278)" opacity="0.7"/>
+  <ellipse cx="225" cy="272" rx="18" ry="8" fill="#3a6332" transform="rotate(25 225 272)" opacity="0.7"/>
+  <ellipse cx="200" cy="290" rx="16" ry="7" fill="#4f7942" opacity="0.6"/>
+  <!-- Brand text bottom -->
+  <text x="200" y="318" font-family="Georgia, serif" font-size="8" fill="#f6f1e7" text-anchor="middle" letter-spacing="2" opacity="0.7">MISTVALE TEA CO.</text>
+  <text x="200" y="332" font-family="Arial, sans-serif" font-size="9" fill="#d9962b" text-anchor="middle" opacity="0.85">100 g · Green Tea</text>
+</svg>
